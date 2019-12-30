@@ -1,9 +1,9 @@
 import React from 'react'
 
-export const Projects = () => {
+export const UnknownRoute = () => {
   return (
     <div>
-      Projects
+      this is a 404
     </div>
   )
 }
