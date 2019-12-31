@@ -1,7 +1,42 @@
-html, body {
-  height: 100%;
+* {
+  font-family: 'Press Start 2P', cursive;
 }
 
-#root {
+html, body, #root {
   height: 100%;
+  background-color: #212121;
+}
+
+h1 {
+  color: yellow;
+}
+
+h6 {
+  color: white;
+}
+
+.animateProjectButton {
+  animation-duration: 1s;
+  animation-name: change;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: forward;
+}
+
+@keyframes change {
+  0% {
+    color: #D500F9;
+  }
+  25% {
+    color: #FFEA00;
+  }
+  50% {
+    color: #C6FF00;
+  }
+  75% {
+    color: #00E5FF;
+  }
+  100% {
+    color: #FFFFFF;
+  }
 }

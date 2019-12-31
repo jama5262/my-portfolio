@@ -10,7 +10,7 @@ import { UnknownRoute } from "./pages/UnknownRoute";
 
 export const App = () => {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Switch>
         <Route exact path={paths.HOME} component={Home} />
         <Route path={paths.PROJECTS} component={Projects} />
