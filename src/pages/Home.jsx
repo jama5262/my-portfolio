@@ -10,8 +10,6 @@ import { faTwitter, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-ic
 
 export const Home = () => {
 
-  // const openProjects
-
   return (
     <div className="container h-100 d-flex justify-content-center">
       <div className="my-auto">
@@ -26,7 +24,7 @@ export const Home = () => {
           </Row>
           <Row className="my-5">
             <Col xs="12">
-              <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic possimus, perspiciatis dolores dicta voluptates sequi necessitatibus molestiae quia deleniti voluptatibus nulla ipsa excepturi provident doloribus laudantium commodi maxime nostrum in.</h6>
+              <h6 style={{lineHeight: "30px"}}>I am a <span style={{fontSize: "30px", color: "yellow"}}>Full Stack Developer</span> who focuses on writing clean and efficient code with a passion for designing beautiful and functional user experience</h6>
             </Col>
             <Col className="mt-3" xs="auto">
               <FontAwesomeIcon color="white" size="lg" icon={faEnvelope} />
@@ -42,10 +40,10 @@ export const Home = () => {
           </Row>
           <Row className="align-items-center justify-content-center">
             <Col xs="auto">
-              <Button variant="primary"><Link to={paths.RESUME}><h6>View Resume</h6></Link></Button>
+              <Link to={paths.RESUME}><Button variant="primary">View Resume</Button></Link>
             </Col>
             <Col xs="auto">
-              <Button variant="primary"><Link to={paths.PROJECTS}><h6 className="animateProjectButton">View Projects</h6></Link></Button>
+              <Link to={paths.PROJECTS}><Button className="animateProjectButton" variant="primary">View Projects</Button></Link>
             </Col>
           </Row>
         </Container>
