@@ -24,7 +24,7 @@ export const Home = () => {
           </Row>
           <Row className="my-5">
             <Col xs="12">
-              <h6 style={{lineHeight: "30px"}}>I am a <span style={{fontSize: "30px", color: "yellow"}}>Full Stack Developer</span> who focuses on writing clean and efficient code with a passion for designing beautiful and functional user experience</h6>
+              <h6 style={{ lineHeight: "30px" }}>I am a <span style={{ fontSize: "30px", color: "yellow" }}>Full Stack Developer</span> who focuses on writing clean and efficient code with a passion for designing beautiful and functional user experience</h6>
             </Col>
             <Col className="mt-3" xs="auto">
               <FontAwesomeIcon color="white" size="lg" icon={faEnvelope} />
@@ -40,7 +40,7 @@ export const Home = () => {
           </Row>
           <Row className="align-items-center justify-content-center">
             <Col xs="auto">
-              <Link to={paths.RESUME}><Button variant="primary">View Resume</Button></Link>
+              <a href="http://www.africau.edu/images/default/sample.pdf" target="_blank" rel="noopener noreferrer"><Button variant="primary">View Resume</Button></a>
             </Col>
             <Col xs="auto">
               <Link to={paths.PROJECTS}><Button className="animateProjectButton" variant="primary">View Projects</Button></Link>
