@@ -24,7 +24,7 @@ export const Home = () => {
           </Row>
           <Row className="my-5">
             <Col xs="12">
-              <h6 style={{ lineHeight: "30px" }}>I am a <span style={{ fontSize: "30px", color: "yellow" }}>Full Stack Developer</span> who focuses on writing clean and efficient code with a passion for designing beautiful and functional user experience</h6>
+              <h6 style={{ lineHeight: "30px" }}>I focus on writing <span style={{ fontSize: "25px", color: "yellow" }}>clean and efficient code</span> with a passion for designing <span style={{ fontSize: "25px", color: "yellow" }}> beautiful and functional user experience</span></h6>
             </Col>
             <Col className="mt-3" xs="auto">
               <FontAwesomeIcon color="white" size="lg" icon={faEnvelope} />
