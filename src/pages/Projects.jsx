@@ -1,21 +1,37 @@
-import React from 'react'
-import { Container, Row, Col, Image, Button } from "react-bootstrap";
+import React, { useEffect } from 'react'
+import { useSelector, useDispatch } from "react-redux";
+
+import { getProjects } from "../redux/actions";
+
+import { Container, Row, Col, Alert, Spinner } from "react-bootstrap";
 
 import { ProjectCard } from "../components/ProjectCard";
 
 export const Projects = () => {
 
-  const list = [1, 2, 3, 4, 5]
+  const projects = useSelector(state => state.projects.projects)
+  const loading = useSelector(state => state.loading.showLoading)
+
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(getProjects())
+  }, [])
 
   return (
     <Container>
       <Row>
-        <Col><h1>Projects</h1></Col>
+        <Col className="my-5" xs="12"><h1>Projects</h1></Col>
+        <Col>
+          <Alert show={loading} variant="warning">
+            <Spinner animation="border" role="status"></Spinner> Loading Projects
+          </Alert>
+        </Col>
       </Row>
-      <Row>
+      <Row className="mb-5">
         {
-          list.map((value) => {
-            return <Col xs="12" sm="12" md="6"><ProjectCard/></Col>
+          projects.map((project, index) => {
+            return <Col key={index} xs="12" sm="12" md="12" lg="6"><ProjectCard data={project} /></Col>
           })
         }
       </Row>

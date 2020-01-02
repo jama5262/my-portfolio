@@ -1,14 +1,13 @@
-  
 import * as types from "../../utils/constants/actionConstants"
 
 const initialState = {
-  projects: []
+  showLoading: false
 }
 
-export const projects = (state = initialState, action) => {
+export const loading = (state = initialState, action) => {
   switch (action.type) {
-    case types.PROJECTS:
-      state = { ...state, projects: action.projects }
+    case types.LOADING:
+      state = { ...state, showLoading: action.showLoading }
       break;
     default:
       break;

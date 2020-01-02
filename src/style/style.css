@@ -7,7 +7,7 @@ html, body, #root {
   background-color: #212121;
 }
 
-h1 {
+h1, h4 {
   color: yellow;
 }
 

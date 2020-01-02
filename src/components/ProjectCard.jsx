@@ -1,18 +1,30 @@
 import React from 'react'
-import { Card, Button } from "react-bootstrap";
 
-export const ProjectCard = () => {
+import { Row, Col, Card, Badge } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faExternalLinkSquareAlt } from '@fortawesome/free-solid-svg-icons'
+
+export const ProjectCard = (props) => {
+
+  const { title, description, updatedOn, tags, link, image } = props.data
+
   return (
     <div>
-      <Card>
-        <Card.Img variant="top" src="https://www.xmple.com/wallpaper/black-white-lines-streaks-stripes-1920x1080-c2-ffffff-000000-l2-42-59-a-45-f-1.svg" />
+      <Card className="mb-3" bg="dark">
+        <Card.Img variant="top" src={image} />
         <Card.Body>
-          <Card.Title>Card Title</Card.Title>
-          <Card.Text>
-            Some quick example text to build on the card title and make up the bulk of
-            the card's content.
-          </Card.Text>
-          <Button variant="primary">Go somewhere</Button>
+          <a href={ link } target="_blank" rel="noopener noreferrer"><h4>{title} <FontAwesomeIcon color="yellow" icon={faExternalLinkSquareAlt} /></h4></a>
+          <h6 className="my-3" style={{lineHeight: "30px"}}>
+            {description}
+          </h6>
+          <h6 className="mb-3" style={{ fontSize: "10px" }}>Updated on {updatedOn}</h6>
+          <Row>
+            {
+              tags.map((tag, index) => {
+                return <Col key={index} xs="auto"><h6><Badge variant="primary">{tag}</Badge></h6></Col>
+              })
+            }
+          </Row>
         </Card.Body>
       </Card>
     </div>
