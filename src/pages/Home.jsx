@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { analytics } from "firebase";
 import { Link } from 'react-router-dom'
 
 import * as paths from "../utils/constants/routerConstants"
@@ -10,16 +11,20 @@ import { faTwitter, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-ic
 
 export const Home = () => {
 
+  useEffect(() => {
+    analytics().logEvent("new_user", { value: true })
+  }, [])
+
   return (
     <div className="container h-100 d-flex justify-content-center">
       <div className="my-auto">
         <Container>
           <Row className="align-items-center justify-content-between">
             <Col xs="auto">
-              <Image style={{ width: "150px", height: "150px" }} src="https://previews.123rf.com/images/triken/triken1608/triken160800029/61320775-male-avatar-profile-picture-default-user-avatar-guest-avatar-simply-human-head-vector-illustration-i.jpg" roundedCircle></Image>
+              <Image style={{ width: "150px", height: "150px" }} src="https://firebasestorage.googleapis.com/v0/b/studious-hydra-133711.appspot.com/o/profile%20picture%2F20200102_154614.jpg?alt=media&token=0e6d2278-3693-47d0-ae98-f7ab2c48e62d" roundedCircle></Image>
             </Col>
             <Col xs="auto">
-              <h1 className="display-4">Hey, I'm Person</h1>
+              <h1 className="display-4">Hey, I'm Jama</h1>
             </Col>
           </Row>
           <Row className="my-5">
@@ -40,7 +45,7 @@ export const Home = () => {
           </Row>
           <Row className="align-items-center justify-content-center">
             <Col xs="auto">
-              <a href="http://www.africau.edu/images/default/sample.pdf" target="_blank" rel="noopener noreferrer"><Button variant="primary">View Resume</Button></a>
+              <a href="https://firebasestorage.googleapis.com/v0/b/studious-hydra-133711.appspot.com/o/resume%2FResume.pdf?alt=media&token=d89c72c9-ee55-4846-963a-3f00b41c19d1" target="_blank" rel="noopener noreferrer"><Button variant="primary">View Resume</Button></a>
             </Col>
             <Col xs="auto">
               <Link to={paths.PROJECTS}><Button className="animateProjectButton" variant="primary">View Projects</Button></Link>

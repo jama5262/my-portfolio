@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from "react-redux";
+import { analytics } from "firebase";
 
 import { getProjects } from "../redux/actions";
 
@@ -16,6 +17,7 @@ export const Projects = () => {
 
   useEffect(() => {
     dispatch(getProjects())
+    analytics().logEvent("view_projects", {value: true})
   }, [])
 
   return (
