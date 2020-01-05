@@ -17,7 +17,7 @@ export const Projects = () => {
 
   useEffect(() => {
     dispatch(getProjects())
-    analytics().logEvent("view_projects", {value: true})
+    analytics().logEvent("view_projects", { value: new Date().toLocaleString() })
   }, [])
 
   return (

@@ -12,7 +12,7 @@ import { faTwitter, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-ic
 export const Home = () => {
 
   useEffect(() => {
-    analytics().logEvent("new_user", { value: true })
+    analytics().logEvent("new_user", { value: new Date().toLocaleString() })
   }, [])
 
   return (
