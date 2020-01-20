@@ -7,9 +7,11 @@ export const loadingAction = showLoading => ({ type: types.LOADING, showLoading 
 export const getProjects = () => {
   return (dispatch) => {
     dispatch(loadingAction(true))
-    database().ref('projects').once('value')
+    database()
+    .ref('projects')
+    .once('value')
     .then((data) => {
-      dispatch(addProjects(data.val()))
+      dispatch(addProjects(data.val().sort((a, b) => a.priority - b.priority)))
       dispatch(loadingAction(false))
     })
     .catch((error) => {
