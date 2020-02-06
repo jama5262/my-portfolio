@@ -7,7 +7,7 @@ import * as paths from "../utils/constants/routerConstants"
 import { Container, Row, Col, Image, Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import { faTwitter, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faTwitter, faGithub, faLinkedin, faStackOverflow } from '@fortawesome/free-brands-svg-icons'
 
 export const Home = () => {
 
@@ -29,7 +29,7 @@ export const Home = () => {
           </Row>
           <Row className="my-5">
             <Col xs="12">
-              <h6 style={{ lineHeight: "30px" }}>I focus on writing <span style={{ fontSize: "25px", color: "yellow" }}>clean and efficient code</span> with a passion for designing <span style={{ fontSize: "25px", color: "yellow" }}> beautiful and functional user experience</span></h6>
+              <h6 style={{ lineHeight: "30px" }}>I focus on writing <span style={{ fontSize: "25px", color: "yellow" }}>clean and efficient code</span> with a passion for <span style={{ fontSize: "25px", color: "yellow" }}> designing beautiful and functional user experience</span></h6>
             </Col>
             <Col className="mt-3" xs="auto">
               <FontAwesomeIcon color="white" size="lg" icon={faEnvelope} />
@@ -41,6 +41,7 @@ export const Home = () => {
           <Row className="mb-5">
             <Col xs="auto"><a href="https://www.linkedin.com/in/jama-mohamed/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon color="white" size="3x" icon={faLinkedin} /></a></Col>
             <Col xs="auto"><a href="https://github.com/jama5262" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon color="white" size="3x" icon={faGithub} /></a></Col>
+            <Col xs="auto"><a href="https://stackoverflow.com/users/6459510/jama-mohamed" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon color="white" size="3x" icon={faStackOverflow} /></a></Col>
             <Col xs="auto"><a href="https://twitter.com/timedjama5262" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon color="white" size="3x" icon={faTwitter} /></a></Col>
           </Row>
           <Row className="align-items-center justify-content-center">
